@@ -16,7 +16,7 @@ class Siswa extends CI_Controller
         $data['title'] = 'Data Siswa';
 		$data['siswa'] = $this->M_siswa->get('siswa')->result_array();
 		if ($this->input->post('keyword')) {
-			$data['siswa'] = $this->Siswa_m->cariDataSiswa();
+			$data['siswa'] = $this->M_siswa->cariDataSiswa();
 		}
 		if ($this->form_validation->run() == FALSE) {
 		$this->load->view('siswa', $data);
